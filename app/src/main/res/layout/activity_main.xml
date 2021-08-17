@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:backgroundTint="@color/white"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="340dp"
+                    android:orientation="vertical"
+                    android:layout_margin="6dp"
+                    android:layout_weight="1"
+                    android:padding="6dp"
+                    android:background="@drawable/custom_bg"
+                    >
+                    <ImageView
+                        android:id="@+id/imgOriginal"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:scaleType="centerCrop"></ImageView>
+
+                    <TextView
+                        android:id="@+id/txtOriginal"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:textColor="@color/black"
+                        android:textAlignment="center"
+                        android:gravity="center"></TextView>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="340dp"
+                    android:orientation="vertical"
+                    android:layout_margin="6dp"
+                    android:layout_weight="1"
+                    android:padding="6dp"
+                    android:background="@drawable/custom_bg"
+                    >
+                    <ImageView
+                        android:id="@+id/imgCompressed"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:scaleType="centerCrop"></ImageView>
+
+                    <TextView
+                        android:id="@+id/txtCompressed"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:textColor="@color/black"
+                        android:textAlignment="center"
+                        android:gravity="center"></TextView>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/txtHeight"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:inputType="number"
+                    android:layout_margin="6dp"
+                    android:hint="Height"
+                    android:gravity="center"
+                    android:background="@drawable/custom_bg"></EditText>
+                <EditText
+                    android:layout_margin="6dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/txtWidth"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:inputType="number"
+                    android:hint="Width"
+                    android:gravity="center"
+                    android:background="@drawable/custom_bg"></EditText>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtQuality"
+                android:text="Quality: "
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_marginTop="16dp"></TextView>
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"></SeekBar>
+
+            <Button
+                android:id="@+id/btnPick"
+                android:text="Pick image"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"></Button>
+
+            <Button
+                android:id="@+id/btnCompress"
+                android:visibility="gone"
+                android:text="Compress image"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"></Button>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
